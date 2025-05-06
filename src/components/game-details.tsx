@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Game } from "../types/games.types";
+import Image from "next/image";
 
 const GameCard = ({ game }: { game: Game }) => {
     console.log("Game object:", game);
@@ -7,7 +8,7 @@ const GameCard = ({ game }: { game: Game }) => {
     console.log("Game Name:", game.name);
   return (
     <div className="border p-4 rounded-lg shadow-md">
-      <img
+      <Image
         src={game.background_image}
         alt={game.name}
         className="w-full h-40 object-cover rounded"

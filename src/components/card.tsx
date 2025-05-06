@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Game } from "../types/games.types";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import FavoriteButton from "./FavoriteButton";
+import Image from "next/image";
 
 const renderStars = (rating: number) => {
     const stars = [];
@@ -33,7 +34,7 @@ export default function GameCard({ game }: { game: Game }) {
 
             <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
 
-                <img
+                <Image
                     src={game.background_image}
                     alt={game.name}
                     className="w-full h-48 object-cover rounded-lg mb-4"

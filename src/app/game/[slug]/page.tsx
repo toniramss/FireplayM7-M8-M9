@@ -1,6 +1,7 @@
 import { getGameDetails } from "../../../lib/requests";
 import { GameDetails } from "../../../types/game-details.types";
 import AddToCartButton from "../../../components/AddToCartButton";
+import Image from "next/image";
 /* import GameMainInfo from "../../../components/game-main-info";
 import GameMainImages from "../../../components/game-main-images";
 import Rating from "../../../components/rating";
@@ -25,7 +26,7 @@ export default async function GameDetailPage({ params }: {
 
             {/* Imagen principal */}
             <div className="mb-6">
-                <img
+                <Image
                     src={game.background_image}
                     alt={`Imagen de ${game.name}`}
                     className="w-full h-100 object-cover rounded-xl shadow-lg"

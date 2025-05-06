@@ -1,6 +1,7 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
+import Image from "next/image";
 
 export default function CartPage() {
   const { cart, removeFromCart, getTotal, clearCart } = useCart();
@@ -20,7 +21,7 @@ export default function CartPage() {
             >
               <div className="flex items-center gap-4">
                 {/* Usa <img> si next/image da error por dominio */}
-                <img
+                <Image
                   src={game.background_image}
                   alt={game.name}
                   width={100}

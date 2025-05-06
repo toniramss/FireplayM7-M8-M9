@@ -6,6 +6,7 @@ import { useCart } from "@/context/CartContext";
 import { useEffect, useState } from "react";
 import { db } from "@/firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import Image from "next/image";
 
 export default function DashboardPage() {
   const { user } = useAuth();
@@ -38,7 +39,7 @@ export default function DashboardPage() {
 
       {/* Usuario */}
       <div className="flex items-center gap-4 mb-8">
-        <img
+        <Image
           src="https://i.pravatar.cc/100"
           alt="Avatar"
           className="w-16 h-16 rounded-full"

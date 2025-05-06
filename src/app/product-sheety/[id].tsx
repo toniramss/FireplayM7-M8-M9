@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 const GameDetails = () => {
   const [game, setGame] = useState<any>(null);  // Estado para almacenar los detalles del juego
@@ -54,7 +55,7 @@ const GameDetails = () => {
           <h2 className="text-xl font-semibold">Capturas:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
             {game.short_screenshots?.map((screenshot: any) => (
-              <img
+              <Image
                 key={screenshot.id}
                 src={screenshot.image}
                 alt="Captura"
