@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Game } from "../types/games.types";
 import { FaStar, FaRegStar } from "react-icons/fa";
+import FavoriteButton from "./FavoriteButton";
 
 const renderStars = (rating: number) => {
     const stars = [];
@@ -39,6 +40,8 @@ export default function GameCard({ game }: { game: Game }) {
                 />
                 <h3 className="text-lg font-semibold">{game.name}</h3>
                 <div className="flex flex-row text-sm text-gray-500 items-center">{game.rating} &nbsp; {renderStars(game.rating)}</div>
+
+                <FavoriteButton game={game} />
 
             </div>
 

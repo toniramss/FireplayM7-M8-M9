@@ -22,11 +22,20 @@ export default function Header() {
         </Link>
 
         <nav className="space-x-4 flex items-center">
+          <Link href="/games" className="hover:underline">
+            Juegos
+          </Link>
           <Link href="/favorites" className="hover:underline">
             Favoritos
           </Link>
           <Link href="/cart" className="hover:underline">
             Carrito
+          </Link>
+          <Link href="/contact" className="hover:underline">
+            Contacto
+          </Link>
+          <Link href="/dashboard" className="hover:underline">
+            Mi cuenta
           </Link>
 
           {user ? (
