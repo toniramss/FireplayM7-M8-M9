@@ -4,8 +4,19 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
+interface GameDetails {
+  id: string;
+  name: string;
+  description_raw: string;
+  short_screenshots: { id: string; image: string }[];
+  released: string;
+  developers: { name: string }[];
+  genres: { name: string }[];
+  tags: { name: string }[];
+}
+
 const GameDetails = () => {
-  const [game, setGame] = useState<any>(null);  // Estado para almacenar los detalles del juego
+  const [game, setGame] = useState<GameDetails | null>(null);  // Estado para almacenar los detalles del juego
   const [loading, setLoading] = useState<boolean>(true); // Estado de carga
   const [error, setError] = useState<string | null>(null); // Estado de error
 
