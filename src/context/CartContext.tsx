@@ -4,13 +4,14 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useAuth } from "./AuthContext";
 import { db } from "@/firebase/firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+import { Game } from "@/types/games.types";
 
-interface Game {
+/* interface Game {
     id: number;
     name: string;
     background_image: string;
     price: number;
-}
+} */
 
 interface CartContextType {
     cart: Game[];

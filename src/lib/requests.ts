@@ -1,7 +1,7 @@
-import axios from 'axios';
+//import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_RAWG_API_URL;
-const API_KEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
+//const API_URL = process.env.NEXT_PUBLIC_RAWG_API_URL;
+//const API_KEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
 
 export async function getSearchedGames(query: string) {
 

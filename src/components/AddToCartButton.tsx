@@ -1,8 +1,10 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
+import { GameDetails } from "@/types/game-details.types";
+import { Game } from "@/types/games.types";
 
-export default function AddToCartButton({ game }: { game: any }) {
+export default function AddToCartButton({ game }: { game: Game }) {
   const { cart, addToCart, removeFromCart } = useCart();
   const isInCart = cart.some((g) => g.id === game.id);
 
