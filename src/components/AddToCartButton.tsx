@@ -1,7 +1,7 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
-import { GameDetails } from "@/types/game-details.types";
+//import { GameDetails } from "@/types/game-details.types";
 import { Game } from "@/types/games.types";
 
 export default function AddToCartButton({ game }: { game: Game }) {

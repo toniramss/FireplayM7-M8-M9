@@ -28,7 +28,7 @@ export default function LoginForm() {
             // Limpiar los campos después del inicio de sesión
             setEmail("");
             setPassword("");
-        } catch (err: any) {
+        } catch (err) {
             // Aquí puedes manejar diferentes tipos de errores que podrían ocurrir
             if (err.code === "auth/wrong-password") {
                 setError("La contraseña es incorrecta. Intenta de nuevo.");
